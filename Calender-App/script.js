@@ -1,8 +1,8 @@
 function updateCalendar() {
     const now = new Date();
     const day = now.getDate();
-    const monthNames = ["january", "february", "march", "april", "may",
-        "june", "july", "august", "september", "october", "november", "december"];
+    const monthNames = ["January", "February", "March", "April", "May",
+        "June", "July", "August", "September", "October", "November", "December"];
     
     const month = monthNames[now.getMonth()];
 
