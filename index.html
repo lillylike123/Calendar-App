@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desk Widget</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="close-btn" onclick="window.close()">&times;</button>
+    <button id="dark-mode">🌙</button>
+
+    <div class="app">
+        <div class="title">Amira's Widgets</div>
+        
+        <div id="calendar-card">
+            <div id="weekday"></div>
+            <div id="day"></div>
+            <div id="month"></div>
+        </div>
+
+        <div id="timer-card">
+            <div id="timer-display">05:00</div>
+            <div class="timer-controls">
+                <button id="start-btn" onclick="toggleTimer()">Start</button>
+                <button id="reset-btn" onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

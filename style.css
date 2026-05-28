@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+ 
+  background: linear-gradient(135deg, #95cfe6 0%, #e0b6dc 100%); 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #4a354f;
+  user-select: none;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  max-width: 200px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7d5c85;
+  margin-bottom: 10px;
+}
+
+
+#calendar-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border:  1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(125, 92, 133, 0.12);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+
+}
+
+#timer-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(125, 92, 133, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer-display {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2440;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.timer-controls button {
+  -webkit-app-region: no-drag;
+  background: #7d5c85;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.timer-controls button:hover {
+  background: #5c4063;
+}
+
+.timer-controls button:active {
+  transform: scale(0.95);
+}
+
+#weekday {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9c6fa3;
+  margin-bottom: 2px;
+}
+
+#day {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: #3b2440;
+  letter-spacing: -1px;
+  margin: 2px 0;
+}
+
+#month {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5c4063;
+}
+
+
+#close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #7d5c85;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity 0.2s ease;
+  -webkit-app-region: no-drag;
+  z-index: 10;
+}
+
+body:hover #close-btn {
+  opacity: 0.6;
+}
+
+#close-btn:hover {
+  opacity: 1 !important;
+  color: #3b2440;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #2b1b2d 0%, #170e19 100%);
+  color: #f2e6f3;
+}
+body.dark-mode #calender-card, body.dark-mode #timer-card {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
